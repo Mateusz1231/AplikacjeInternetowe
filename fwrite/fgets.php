@@ -1,6 +1,5 @@
 <?php
-$myfile = fopen("newfile.txt","t") or die("Unable to open the file!");
-$txt = "John Doe\n";
-fwrite($myfile, $txt);
+$myfile = fopen("webdictionary","r") or die("Unable to open the file!");
+echo fgets($myfile);
 fclose($myfile);
 ?>
