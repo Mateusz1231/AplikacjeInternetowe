@@ -1,11 +1,10 @@
 <?php
 
-$cookie_name = "user";
+$cookie_name = "promocja";
 
-$cookie_value = "John Doe";
+$cookie_value = "wycieczka";
 
 setcookie($cookie_name, $cookie_value,
-
-            time() + (24*60*60) );
-
+            time() + (48*60*60) );
+echo ('</br><a href="cookie.php"> Next </a>');
 ?>
