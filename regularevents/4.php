@@ -2,12 +2,12 @@
 
 $wzorzec = '/((\bhttps?:\/\/)|(\bwww\.))\S*/';
 
-$tekst = "adres: www.huj.pl ";
+$tekst = "adres: www.apoefjsp.pl ";
 
 if(preg_match($wzorzec, $tekst, $zmienna)){
     echo "znaleziono adres: ".  $zmienna[0];
 } else {
-    echo "nie znaleziono adres";
+    echo "nie znaleziono adresu";
 }
 
 
