@@ -16,25 +16,11 @@ if (mysqli_select_db($conn, $database)){
     echo "Error select database: ".mysqli_error($conn);
 }
 
-// $sql = "CREATE TABLE myGuests (
-//     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     firstname VARCHAR(30) NOT NULL,
-//     lastname VARCHAR(30) NOT NULL,
-//     email VARCHAR(50),
-//     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-//     )";
+$sql = "DELETE FROM myGuests WHERE id=3";
 
-//     if(mysqli_query($conn, $sql)){
-//         echo "table myGuests created succesfully";
-//     } else {
-//         echo "Error creating table: ".mysqli_error($conn);
-//     }
-// $sql = "INSERT INTO myGuests (firstname, lastname , email) VALUES ('ad321am','ad12a','jad123am@example.com');
-// INSERT INTO myGuests (firstname, lastname , email) VALUES ('adam','ada','jadam@example.com');
-// INSERT INTO myGuests (firstname, lastname , email) VALUES ('marek','mare','jmarek@example.com');";
-// if(mysqli_multi_query($conn, $sql)){
-//              echo "succesfully";
-//          } else {
-//              echo "Error: ".mysqli_error($conn);
-//          }
+if (mysqli_query($conn, $sql)){
+    echo "deleted";
+} else {
+    echo mysqli_error($conn);
+}
 ?>
